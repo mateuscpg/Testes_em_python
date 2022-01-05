@@ -20,8 +20,15 @@ elif op == 2:
     razão = int(input("Razão:"))
     termo = prim
     cont = 1
-    while cont <= 10:
-        print ('{}'.format (termo), end = " -> ")
-        termo += razão
-        cont += 1
-    print ("ACABOU")
+    total = 0
+    esco = 10
+    while esco != 0:
+        total += esco
+        while cont <= total:
+            print ('{}'.format (termo), end = " -> ")
+            termo += razão
+            cont += 1
+        print ('PAUSA')
+        esco = int(input('Quantos termos você quer mostrar a mais?')) 
+            
+        print ("ACABOU")
