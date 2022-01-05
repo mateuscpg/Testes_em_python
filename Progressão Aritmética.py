@@ -29,6 +29,6 @@ elif op == 2:
             termo += razão
             cont += 1
         print ('PAUSA')
-        esco = int(input('Quantos termos você quer mostrar a mais?')) 
-            
-        print ("ACABOU")
+        esco = int(input('Quantos termos você quer mostrar a mais?'))  
+
+print ("Progressão finalizada! Foi mostrado {} termos".format(total))
