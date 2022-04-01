@@ -1,45 +1,37 @@
-import numpy as np
+expressao = input("Digite a expressão: ")
+pilha1 = []
+pilha2 = []
+pilha3 = []
 
-class Pilha:
-    def __init__(self, capacidade):
-        self.__capacidade = capacidade
-        self.__topo = -1
-        self.__valores = np.empt(self.capacidade, dtype =int)
+for caractere in expressao:
+  if(caractere == '('):
+    pilha1.append('(')
+  elif(caractere == ')'):
+    if (len(pilha1) > 0):
+      pilha1.pop()
+    else:
+      pilha1.append(')')
+      break
+  
+  if(caractere == '['):
+    pilha2.append('[')
+  elif(caractere == ']'):
+    if (len(pilha2) > 0):
+      pilha2.pop()
+    else:
+      pilha2.append(']')
+      break
+  
+  if(caractere == '{'):
+    pilha3.append('{')
+  elif(caractere == '}'):
+    if (len(pilha3) > 0):
+      pilha3.pop()
+    else:
+      pilha3.append('}')
+      break
 
-
-    def __pilha_vazia(self):
-        if self._topo == -1:
-            return True
-        else:
-            return False
-    
-    def __pilha_cheia(self):
-        if self.__topo == self.__capacidade -1:
-            return True
-        else:
-            return False
-    
-    def empilhar(self, valor):
-        if self.__pilha_cheia():
-            print("A pilha está cheia")
-        else:
-            self._topo += 1
-            self.__valores[self.__topo] = valor
-
-    def desimpilha(self):
-        if self.__pilha_vazia():
-            print("A pilha está vazia")
-        else:
-            self.topo -= 1
-    
-    def ver_topo(self):
-        if self._topo != -1:
-            return self.__valores[self.__topo]
-        else:
-            return -1
-
-pilha = Pilha(5)
-
-pilha.ver_topo()
-print(pilha.ver_topo())
-            
+if(len(pilha1) == 0 and len(pilha2) == 0 and len(pilha3) == 0):
+  print("Sua expressão está válida!")
+else:
+  print("Sua expressão está errada!")
