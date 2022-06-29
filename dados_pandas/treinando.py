@@ -1,5 +1,5 @@
 import pandas as pd 
-import texttable 
+
 vendas = {'data': ['15/06/2022', '16/06/2022'],
 'valor': [500, 600],
 'produtos': ['carne', 'feijão'],
@@ -8,4 +8,4 @@ vendas = {'data': ['15/06/2022', '16/06/2022'],
 vendas_df = pd.DataFrame(vendas)
 
 
-print(texttable(vendas_df))
+print(vendas_df)
