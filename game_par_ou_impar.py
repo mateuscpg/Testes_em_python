@@ -13,7 +13,7 @@ while True:
     else:
         valor = 'I'
 
-    if jog == valor:
+    if jog ==  valor:
         print('PARABÉNS, VOCÊ GANHOU')
         vitoria += 1
     else: 
