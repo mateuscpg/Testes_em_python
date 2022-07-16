@@ -1,9 +1,7 @@
-n = int(input("Qual número você quer saber a tabuada?"))
-for c in range (0, 11):
-    print ("{} x {} = {}".format (n, c, n*c))
-    
-
-    
-
-    
-    
+opc = int(input("Quer saber a tabuada de qual valor? "))
+while opc > 0:
+    for i in range(0,11):
+        print(f"{opc} x {i} = {opc*i} ")
+    print("--------------------")    
+    opc = int(input("Quer saber a tabuada de qual valor? "))
+print("Fim do programa!")
