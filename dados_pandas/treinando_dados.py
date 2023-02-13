@@ -36,3 +36,16 @@ data = {
 df = pd.DataFrame(data)
 print(df)
 
+pagamento = {
+  "Data" : {
+    "0":"10/01/23",
+    "1":"11/01/23",
+  },
+  "Fatura" : {
+    "0": "R$ 1000",
+    "1": "R$ 2000"
+  }
+}
+
+df2 = pd.DataFrame(pagamento)
+print (df2)

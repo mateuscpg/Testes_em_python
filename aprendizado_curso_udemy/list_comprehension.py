@@ -29,11 +29,12 @@ ex5 = dict(ex5)                              #Transforma a tupla em dicionário
 print(ex5)          
 print()                        
 
-l3 = list(range(100))
-ex6 = [v for v in l3 if v % 3 == 0 if v % 8 == 0]
+l3 = list(range(100))                                   #Lista com 100 números
+ex6 = [v for v in l3 if v % 3 == 0 if v % 8 == 0]       #Mostar todos os números da l3 que forem divisíveis por 3 e por 8
 print(ex6)          
 print()      
 
-ex7 = [v if v % 3 == 0 else "__" for v in l3]
-print(ex7)          
+ex7 = [v if v % 3 == 0 else "__" for v in l3]          #Mostra os números que forem divisíveis por 3, e os que não são
+print(ex7)                                             # foram substituídos por "__"
 print()      
+
